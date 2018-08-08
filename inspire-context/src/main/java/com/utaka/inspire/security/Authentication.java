@@ -9,6 +9,7 @@ import com.utaka.inspire.context.CurrentSessionProvider;
 
 /**
  * 身份验证器，由系统调用，具体应用通过传递{@link AuthenticateFunction}来实现验证逻辑。
+ * @author LANXE
  */
 public interface Authentication {
 

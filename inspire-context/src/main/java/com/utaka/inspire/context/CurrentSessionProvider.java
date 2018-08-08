@@ -10,9 +10,9 @@ import com.utaka.inspire.security.AuthenticationToken;
 import java.util.Set;
 
 /**
- * 回话提供者
+ * 当前会话提供者；抽象会话管理。具体实现可以存储到内存、session、redis等。
  *
- * @author lanxe
+ * @author LANXE
  */
 public interface CurrentSessionProvider<T> {
 

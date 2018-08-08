@@ -7,12 +7,6 @@
  */
 package com.utaka.inspire.event.rocketmq;
 
-import com.alibaba.rocketmq.client.exception.MQBrokerException;
-import com.alibaba.rocketmq.client.exception.MQClientException;
-import com.alibaba.rocketmq.client.producer.DefaultMQProducer;
-import com.alibaba.rocketmq.client.producer.SendResult;
-import com.alibaba.rocketmq.common.message.Message;
-import com.alibaba.rocketmq.remoting.exception.RemotingException;
 import com.google.common.base.Charsets;
 import com.google.common.eventbus.AllowConcurrentEvents;
 import com.google.common.eventbus.Subscribe;
@@ -21,17 +15,22 @@ import com.utaka.inspire.event.EventBusManager;
 import com.utaka.inspire.event.KeyResolver;
 import com.utaka.inspire.util.LogManager;
 import com.utaka.inspire.util.Serializing;
+import org.apache.rocketmq.client.exception.MQBrokerException;
+import org.apache.rocketmq.client.exception.MQClientException;
+import org.apache.rocketmq.client.producer.DefaultMQProducer;
+import org.apache.rocketmq.client.producer.SendResult;
+import org.apache.rocketmq.common.message.Message;
+import org.apache.rocketmq.remoting.exception.RemotingException;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
-import org.springframework.jms.JmsException;
 import org.springframework.util.StringUtils;
 
 
 /**
- * @author lanxe
+ * @author LANXE
  */
 public class RocketMqAsyncMessageListener implements InitializingBean, DisposableBean {
 
@@ -57,7 +56,7 @@ public class RocketMqAsyncMessageListener implements InitializingBean, Disposabl
 
     @Subscribe
     @AllowConcurrentEvents
-    public void onEnqueue(Object event) throws JmsException {
+    public void onEnqueue(Object event) {
         try {
             if (event != null) {
                 this.enqueue(event);
@@ -69,7 +68,7 @@ public class RocketMqAsyncMessageListener implements InitializingBean, Disposabl
         }
     }
 
-    private void enqueue(Object event) throws JmsException, InterruptedException, RemotingException, MQClientException, MQBrokerException {
+    private void enqueue(Object event) throws InterruptedException, RemotingException, MQClientException, MQBrokerException {
         String topic = this.topic;
         String body = Serializing.json().toString(event);
         if (event instanceof DestinationNameResolver) {
@@ -103,12 +102,8 @@ public class RocketMqAsyncMessageListener implements InitializingBean, Disposabl
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        if (StringUtils.isEmpty(topic)) {
-            topic = env.getProperty("jms.queue.name", "event_queue");
-        }
-
         if (bus == null) {
-            bus = new EventBusManager();
+            bus = EventBusManager.INSTANCE;
         }
         bus.registerAsync(this);
         producer.start();

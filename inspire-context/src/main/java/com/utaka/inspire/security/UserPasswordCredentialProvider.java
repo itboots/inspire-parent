@@ -5,7 +5,9 @@
 package com.utaka.inspire.security;
 
 /**
- * @author lanxe
+ * 用户密码身份凭证提供者
+ *
+ * @author LANXE
  */
 public interface UserPasswordCredentialProvider extends CredentialProvider<UserPasswordCredential> {
 }

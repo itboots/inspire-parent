@@ -29,7 +29,7 @@ import java.util.TimeZone;
 import java.util.logging.Logger;
 
 /**
- * @author lanxe
+ * @author LANXE
  */
 public final class Serializing {
     private static final String EMPTY = "";

@@ -7,7 +7,7 @@ package com.utaka.inspire.util;
 import org.springframework.util.StringUtils;
 
 /**
- * @author lanxe
+ * @author LANXE
  */
 public final class CodeTimer implements Disposable {
 

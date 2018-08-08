@@ -12,7 +12,7 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
 /**
- * @author XINEN
+ * @author LANXE
  */
 public final class GZips {
     private static final int BUFFER = 2048;

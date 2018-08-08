@@ -10,7 +10,7 @@ package com.utaka.inspire.event.jms;
 import com.google.common.base.MoreObjects;
 
 /**
- * @author lanxe
+ * @author LANXE
  */
 public class JmsMessage {
     public static final String BODY_CLASS = "__body_class__";

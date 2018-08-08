@@ -1,0 +1,51 @@
+<!--
+  ~ Copyright (c) 2018. utaka and/or its affiliates.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.utaka.inspire</groupId>
+    <artifactId>inspire-bom</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.2</version>
+
+    <properties>
+        <inspire.version>1.0.2</inspire.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- inspire dependencies -->
+            <dependency>
+                <groupId>com.utaka.inspire</groupId>
+                <artifactId>inspire-context</artifactId>
+                <version>${inspire.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.utaka.inspire</groupId>
+                <artifactId>inspire-context-support</artifactId>
+                <version>${inspire.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.utaka.inspire</groupId>
+                <artifactId>inspire-autoconfigure</artifactId>
+                <version>${inspire.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Internal Releases</name>
+            <url>http://172.16.2.21:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Internal Snapshots</name>
+            <url>http://172.16.2.21:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>

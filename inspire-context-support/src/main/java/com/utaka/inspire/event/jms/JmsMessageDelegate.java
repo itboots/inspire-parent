@@ -23,7 +23,7 @@ import java.util.Map;
 
 
 /**
- * @author lanxe
+ * @author LANXE
  */
 public class JmsMessageDelegate implements InitializingBean {
 

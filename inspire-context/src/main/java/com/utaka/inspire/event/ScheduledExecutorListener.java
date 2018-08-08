@@ -10,9 +10,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * 定时任务监听器
  *
- * @author XINEN
+ * @author LANXE
  */
-
 public abstract class ScheduledExecutorListener extends ExecutorListener {
 
     protected ScheduledFuture<?> scheduleWithFixedDelay(Runnable command,

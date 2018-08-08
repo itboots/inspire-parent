@@ -5,7 +5,9 @@
 package com.utaka.inspire.security;
 
 /**
- * Exception to managed errors on the authentication proccess
+ * 身份认证相关的异常
+ *
+ * @author LANXE
  */
 public class AuthenticationException extends RuntimeException {
 

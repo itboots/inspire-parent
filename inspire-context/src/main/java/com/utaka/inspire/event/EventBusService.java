@@ -7,6 +7,7 @@ package com.utaka.inspire.event;
 /**
  * 提供事件总线服务
  *
+ * @author LANXE
  * @see DefaultEventBusService
  * @see EventBusManager
  */

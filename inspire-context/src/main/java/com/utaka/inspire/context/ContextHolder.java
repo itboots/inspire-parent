@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 /**
  * 提供当前执行上下文的环境。
  *
- * @author lanxe
+ * @author LANXE
  */
 @Component
 public final class ContextHolder implements ApplicationContextAware {

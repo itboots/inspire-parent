@@ -14,15 +14,11 @@ import java.util.concurrent.TimeUnit;
  * 事件总线的服务类，用于提供发送事件和注册监听器。
  * <b>不保证异步事务的完整性</b>
  *
- * @author XINEN
+ * @author LANXE
  */
 public final class DefaultEventBusService extends EventBusManager {
 
-    private static EventBusService instance = new DefaultEventBusService();
-
-    public static EventBusService getInstance() {
-        return instance;
-    }
+    public static DefaultEventBusService INSTANCE = new DefaultEventBusService();
 
     public DefaultEventBusService() {
         super(

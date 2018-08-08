@@ -9,7 +9,7 @@ import com.google.common.base.Strings;
 import javax.annotation.Nullable;
 
 /**
- * @author lanxe
+ * @author LANXE
  */
 public abstract class StringUtils extends org.springframework.util.StringUtils {
 

@@ -6,6 +6,8 @@ package com.utaka.inspire.event;
 
 /**
  * 用于指定异步消息的目标名称
+ *
+ * @author LANXE
  */
 public interface DestinationNameResolver {
 

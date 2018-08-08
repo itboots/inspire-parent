@@ -8,15 +8,15 @@ import java.security.Principal;
 import java.util.Set;
 
 /**
- * 取得当前用户标识。作为权限控制的入口
- * 由应用实现
+ * 取得当前用户标识,作为权限控制的入口。
+ * 具体控制逻辑由应用实现
  *
- * @author lanxe
+ * @author LANXE
  */
 public interface PrincipalManager extends GroupManager {
 
     /**
-     * 获取指定用户的权限标识。此次可作为角色使用
+     * 获取指定用户的权限标识；可作为角色使用。
      *
      * @param user 要获取权限标识的用户
      * @return 返回指定用户的权限标识集合

@@ -10,7 +10,7 @@
     <parent>
         <groupId>com.utaka.inspire</groupId>
         <artifactId>inspire-parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
         <relativePath>..</relativePath>
     </parent>
 
@@ -93,9 +93,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.alibaba.rocketmq</groupId>
+            <groupId>org.apache.rocketmq</groupId>
             <artifactId>rocketmq-client</artifactId>
-            <version>3.2.6</version>
+            <version>4.3.0</version>
             <optional>true</optional>
         </dependency>
     </dependencies>

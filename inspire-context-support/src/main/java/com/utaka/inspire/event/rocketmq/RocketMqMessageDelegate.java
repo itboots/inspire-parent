@@ -7,16 +7,16 @@
  */
 package com.utaka.inspire.event.rocketmq;
 
-import com.alibaba.rocketmq.client.consumer.DefaultMQPushConsumer;
-import com.alibaba.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
-import com.alibaba.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
-import com.alibaba.rocketmq.client.consumer.listener.MessageListenerConcurrently;
-import com.alibaba.rocketmq.common.message.MessageExt;
 import com.google.common.base.Charsets;
 import com.utaka.inspire.event.EventBusManager;
 import com.utaka.inspire.util.LogManager;
 import com.utaka.inspire.util.Serializing;
 import com.utaka.inspire.util.StringUtils;
+import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
+import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
+import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
+import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
+import org.apache.rocketmq.common.message.MessageExt;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
@@ -27,7 +27,7 @@ import java.util.List;
 
 
 /**
- * @author lanxe
+ * @author LANXE
  */
 public class RocketMqMessageDelegate implements MessageListenerConcurrently, InitializingBean, DisposableBean {
 

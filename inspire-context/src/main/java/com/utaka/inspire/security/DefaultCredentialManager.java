@@ -13,7 +13,9 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @author lanxe
+ * 默认身份凭证管理
+ *
+ * @author LANXE
  */
 public class DefaultCredentialManager implements CredentialManager, ApplicationContextAware {
 

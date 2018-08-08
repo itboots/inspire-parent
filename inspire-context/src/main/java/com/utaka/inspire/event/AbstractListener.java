@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  * 抽象的监听器，继承此类的对象可直接接收来自{@link EventBusService}的同步消息。
  *
- * @author XINEN
+ * @author LANXE
  */
 public abstract class AbstractListener implements InitializingBean, DisposableBean {
 
@@ -25,7 +25,7 @@ public abstract class AbstractListener implements InitializingBean, DisposableBe
     @Override
     public void afterPropertiesSet() throws Exception {
         if (this.bus == null) {
-            this.bus = DefaultEventBusService.getInstance();
+            this.bus = DefaultEventBusService.INSTANCE;
         }
 
         this.bus.register(this);

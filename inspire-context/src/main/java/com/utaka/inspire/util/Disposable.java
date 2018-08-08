@@ -5,7 +5,7 @@
 package com.utaka.inspire.util;
 
 /**
- * @author XINEN
+ * @author LANXE
  */
 public interface Disposable {
 

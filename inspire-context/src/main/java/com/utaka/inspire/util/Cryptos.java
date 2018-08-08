@@ -16,7 +16,7 @@ import javax.crypto.spec.SecretKeySpec;
 import java.security.GeneralSecurityException;
 
 /**
- * @author lanxe
+ * @author LANXE
  */
 @Beta
 public final class Cryptos {

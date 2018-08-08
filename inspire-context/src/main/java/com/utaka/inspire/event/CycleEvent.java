@@ -6,8 +6,8 @@ package com.utaka.inspire.event;
 
 /**
  * 循环事件
- * <p>
- * Created by lanxe on 2016/4/19.
+ *
+ * @author LANXE
  */
 public abstract class CycleEvent implements DestinationNameResolver, DeliveryDelaySupport {
 

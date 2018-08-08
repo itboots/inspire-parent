@@ -13,7 +13,7 @@ import java.io.Serializable;
 import java.util.Map;
 
 /**
- * @author XINEN
+ * @author LANXE
  */
 public final class StringMaps {
     private StringMaps() {

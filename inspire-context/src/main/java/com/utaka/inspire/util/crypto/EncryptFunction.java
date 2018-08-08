@@ -7,7 +7,7 @@ package com.utaka.inspire.util.crypto;
 import java.security.GeneralSecurityException;
 
 /**
- * @author lanxe
+ * @author LANXE
  */
 public interface EncryptFunction {
 

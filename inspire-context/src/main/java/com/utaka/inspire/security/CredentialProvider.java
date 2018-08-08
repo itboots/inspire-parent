@@ -7,7 +7,9 @@ package com.utaka.inspire.security;
 import java.io.Serializable;
 
 /**
- * @author lanxe
+ * 身份凭证提供者
+ *
+ * @author LANXE
  */
 public interface CredentialProvider<T extends Credential> extends Serializable {
 

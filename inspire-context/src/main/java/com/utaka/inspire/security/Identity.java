@@ -8,7 +8,9 @@ import java.io.Serializable;
 import java.security.Principal;
 
 /**
- * @author lanxe
+ * 用户身份唯一标识
+ *
+ * @author LANXE
  */
 public interface Identity extends Principal, Serializable {
 

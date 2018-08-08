@@ -39,7 +39,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 
 /**
- * @author lanxe
+ * @author LANXE
  */
 public class JmsAsyncMessageListener implements InitializingBean, DisposableBean {
 

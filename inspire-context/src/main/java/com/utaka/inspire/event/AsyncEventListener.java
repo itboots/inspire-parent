@@ -19,7 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  * 统一在这边监听异步事件，并在处理的时候再转化为同步事件。
  *
- * @author lanxe
+ * @author LANXE
  */
 public class AsyncEventListener implements InitializingBean, DisposableBean {
 
@@ -55,7 +55,7 @@ public class AsyncEventListener implements InitializingBean, DisposableBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         if (this.bus == null) {
-            this.bus = DefaultEventBusService.getInstance();
+            this.bus = DefaultEventBusService.INSTANCE;
         }
         this.bus.registerAsync(this);
 

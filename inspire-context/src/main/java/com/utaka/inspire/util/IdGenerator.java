@@ -11,7 +11,7 @@ import java.util.UUID;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * @author XINEN
+ * @author LANXE
  */
 public abstract class IdGenerator {
 

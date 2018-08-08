@@ -9,7 +9,7 @@ import java.util.Set;
 /**
  * 身份验证的标记。作为验证身份后返回的结果。
  *
- * @author lanxe
+ * @author LANXE
  */
 public interface AuthenticationToken {
 

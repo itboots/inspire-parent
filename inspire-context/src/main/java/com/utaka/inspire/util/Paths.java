@@ -11,7 +11,7 @@ import java.io.FileFilter;
 import java.util.List;
 
 /**
- * @author XINEN
+ * @author LANXE
  */
 public abstract class Paths {
 

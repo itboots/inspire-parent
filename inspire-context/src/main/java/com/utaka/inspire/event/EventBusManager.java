@@ -20,6 +20,8 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * 提供把异步消息单独一个总线，由应用决定异步消息处理的机制；比如可以通过队列进行处理。
  * 在需要处理异步消息的地方调用 {@link EventBusManager#registerAsync(Object)}方法类截获异步的消息，然后进行处理。
  * <b>保证异步事务的完整性</b>
+ *
+ * @author LANXE
  */
 public class EventBusManager implements EventBusService, InitializingBean {
 
@@ -98,5 +100,7 @@ public class EventBusManager implements EventBusService, InitializingBean {
         this.debug = Boolean.parseBoolean(this.env.getProperty("debug", "false"));
 
     }
+
+    public static EventBusManager INSTANCE = new EventBusManager();
 
 }

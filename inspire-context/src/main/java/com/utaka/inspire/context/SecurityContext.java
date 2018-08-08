@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * 安全管理上下文
+ * @author LANXE
  */
 @Component
 public class SecurityContext {

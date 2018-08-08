@@ -7,7 +7,9 @@ package com.utaka.inspire.security;
 import java.io.Serializable;
 
 /**
- * @author lanxe
+ * 身份凭证接口
+ *
+ * @author LANXE
  */
 public interface Credential extends Serializable {
     String getId();

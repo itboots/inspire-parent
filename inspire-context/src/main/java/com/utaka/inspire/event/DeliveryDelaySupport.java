@@ -6,6 +6,7 @@ package com.utaka.inspire.event;
 
 /**
  * 用于指定异步消息的延迟时间
+ * @author LANXE
  */
 public interface DeliveryDelaySupport {
 

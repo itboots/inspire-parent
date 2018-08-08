@@ -7,9 +7,8 @@ package com.utaka.inspire.event;
 /**
  * 抽象的异步监听器，继承此类可直接接收{@link EventBusService}的异步消息
  *
- * @author XINEN
+ * @author LANXE
  */
-
 public abstract class AsyncExecutorListener extends ExecutorListener {
 
 }
