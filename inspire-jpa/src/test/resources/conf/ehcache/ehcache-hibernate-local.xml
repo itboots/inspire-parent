@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2018. utaka and/or its affiliates.
+  -->
+
+<ehcache>
+
+    <diskStore path="java.io.tmpdir/hibernate/clear-data"/>
+
+    <!-- DefaultCache setting. -->
+    <defaultCache maxElementsInMemory="10000" memoryStoreEvictionPolicy="LRU" eternal="false"
+                  timeToIdleSeconds="300" timeToLiveSeconds="300" overflowToDisk="false" diskPersistent="false"/>
+
+</ehcache>

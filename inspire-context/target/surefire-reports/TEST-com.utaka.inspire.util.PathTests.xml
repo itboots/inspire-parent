@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.utaka.inspire.util.PathTests" time="0" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="C:\Users\lanxe\dev\java\workspace\utaka\inspire.git\inspire-context\target\test-classes;C:\Users\lanxe\dev\java\workspace\utaka\inspire.git\inspire-context\target\classes;C:\Users\lanxe\.m2\repository\com\google\guava\guava\20.0\guava-20.0.jar;C:\Users\lanxe\.m2\repository\org\springframework\spring-context\5.0.8.RELEASE\spring-context-5.0.8.RELEASE.jar;C:\Users\lanxe\.m2\repository\org\springframework\spring-aop\5.0.8.RELEASE\spring-aop-5.0.8.RELEASE.jar;C:\Users\lanxe\.m2\repository\org\springframework\spring-beans\5.0.8.RELEASE\spring-beans-5.0.8.RELEASE.jar;C:\Users\lanxe\.m2\repository\org\springframework\spring-core\5.0.8.RELEASE\spring-core-5.0.8.RELEASE.jar;C:\Users\lanxe\.m2\repository\org\springframework\spring-jcl\5.0.8.RELEASE\spring-jcl-5.0.8.RELEASE.jar;C:\Users\lanxe\.m2\repository\org\springframework\spring-expression\5.0.8.RELEASE\spring-expression-5.0.8.RELEASE.jar;C:\Users\lanxe\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.6\jackson-databind-2.9.6.jar;C:\Users\lanxe\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\lanxe\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.6\jackson-core-2.9.6.jar;C:\Users\lanxe\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-joda\2.9.6\jackson-datatype-joda-2.9.6.jar;C:\Users\lanxe\.m2\repository\joda-time\joda-time\2.9.9\joda-time-2.9.9.jar;C:\Users\lanxe\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\lanxe\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\lanxe\.m2\repository\org\springframework\spring-test\5.0.8.RELEASE\spring-test-5.0.8.RELEASE.jar;C:\Users\lanxe\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\lanxe\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\lanxe\.m2\repository\org\assertj\assertj-core\3.9.1\assertj-core-3.9.1.jar;C:\Users\lanxe\.m2\repository\org\mockito\mockito-core\2.15.0\mockito-core-2.15.0.jar;C:\Users\lanxe\.m2\repository\net\bytebuddy\byte-buddy\1.7.11\byte-buddy-1.7.11.jar;C:\Users\lanxe\.m2\repository\net\bytebuddy\byte-buddy-agent\1.7.11\byte-buddy-agent-1.7.11.jar;C:\Users\lanxe\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Users\lanxe\lib\java\jdk1.8.0_161-x64\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\lanxe\AppData\Local\Temp\surefire7875025928783004621\surefirebooter898783068038631722.jar C:\Users\lanxe\AppData\Local\Temp\surefire7875025928783004621 2018-08-08T14-05-20_115-jvmRun1 surefire8738276450772130707tmp surefire_08484703342827914497tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\lanxe\dev\java\workspace\utaka\inspire.git\inspire-context\target\test-classes;C:\Users\lanxe\dev\java\workspace\utaka\inspire.git\inspire-context\target\classes;C:\Users\lanxe\.m2\repository\com\google\guava\guava\20.0\guava-20.0.jar;C:\Users\lanxe\.m2\repository\org\springframework\spring-context\5.0.8.RELEASE\spring-context-5.0.8.RELEASE.jar;C:\Users\lanxe\.m2\repository\org\springframework\spring-aop\5.0.8.RELEASE\spring-aop-5.0.8.RELEASE.jar;C:\Users\lanxe\.m2\repository\org\springframework\spring-beans\5.0.8.RELEASE\spring-beans-5.0.8.RELEASE.jar;C:\Users\lanxe\.m2\repository\org\springframework\spring-core\5.0.8.RELEASE\spring-core-5.0.8.RELEASE.jar;C:\Users\lanxe\.m2\repository\org\springframework\spring-jcl\5.0.8.RELEASE\spring-jcl-5.0.8.RELEASE.jar;C:\Users\lanxe\.m2\repository\org\springframework\spring-expression\5.0.8.RELEASE\spring-expression-5.0.8.RELEASE.jar;C:\Users\lanxe\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.6\jackson-databind-2.9.6.jar;C:\Users\lanxe\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\lanxe\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.6\jackson-core-2.9.6.jar;C:\Users\lanxe\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-joda\2.9.6\jackson-datatype-joda-2.9.6.jar;C:\Users\lanxe\.m2\repository\joda-time\joda-time\2.9.9\joda-time-2.9.9.jar;C:\Users\lanxe\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\lanxe\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\lanxe\.m2\repository\org\springframework\spring-test\5.0.8.RELEASE\spring-test-5.0.8.RELEASE.jar;C:\Users\lanxe\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\lanxe\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\lanxe\.m2\repository\org\assertj\assertj-core\3.9.1\assertj-core-3.9.1.jar;C:\Users\lanxe\.m2\repository\org\mockito\mockito-core\2.15.0\mockito-core-2.15.0.jar;C:\Users\lanxe\.m2\repository\net\bytebuddy\byte-buddy\1.7.11\byte-buddy-1.7.11.jar;C:\Users\lanxe\.m2\repository\net\bytebuddy\byte-buddy-agent\1.7.11\byte-buddy-agent-1.7.11.jar;C:\Users\lanxe\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\lanxe"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Users\lanxe\lib\java\jdk1.8.0_161-x64\jre"/>
+    <property name="basedir" value="C:\Users\lanxe\dev\java\workspace\utaka\inspire.git\inspire-context"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\lanxe\AppData\Local\Temp\surefire7875025928783004621\surefirebooter898783068038631722.jar"/>
+    <property name="sun.boot.class.path" value="C:\Users\lanxe\lib\java\jdk1.8.0_161-x64\jre\lib\resources.jar;C:\Users\lanxe\lib\java\jdk1.8.0_161-x64\jre\lib\rt.jar;C:\Users\lanxe\lib\java\jdk1.8.0_161-x64\jre\lib\sunrsasign.jar;C:\Users\lanxe\lib\java\jdk1.8.0_161-x64\jre\lib\jsse.jar;C:\Users\lanxe\lib\java\jdk1.8.0_161-x64\jre\lib\jce.jar;C:\Users\lanxe\lib\java\jdk1.8.0_161-x64\jre\lib\charsets.jar;C:\Users\lanxe\lib\java\jdk1.8.0_161-x64\jre\lib\jfr.jar;C:\Users\lanxe\lib\java\jdk1.8.0_161-x64\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_161-b12"/>
+    <property name="user.name" value="lanxe"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Users\lanxe\lib\java\jdk1.8.0_161-x64\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\lanxe\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\lanxe\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2018.1"/>
+    <property name="java.version" value="1.8.0_161"/>
+    <property name="user.dir" value="C:\Users\lanxe\dev\java\workspace\utaka\inspire.git\inspire-context"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Users\lanxe\lib\java\jdk1.8.0_161-x64\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\lanxe\lib\svn\svn-win32-1.8.5\\bin;C:\Users\lanxe\lib\git\cmd;C:\Users\lanxe\lib\docker;C:\Users\lanxe\lib\node;C:\Users\lanxe\lib\maven\apache-maven-3.5.3\bin;C:\Users\lanxe\lib\spring\spring-1.5.1.RELEASE\bin;C:\Users\lanxe\lib\java\default\bin;C:\Users\lanxe\lib\java\default\jre\bin;C:\Users\lanxe\lib\go\default\bin;C:\Users\lanxe\etc;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\OpenVPN\bin;C:\WINDOWS\System32\OpenSSH\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\OpenVPN\bin;C:\Users\lanxe\lib\git\bin;C:\Users\lanxe\lib\java\jdk1.8.0_121-x64\bin;C:\Users\lanxe\bin;C:\Users\lanxe\etc;C:\Users\lanxe\AppData\Local\Microsoft\WindowsApps;C:\Users\lanxe\lib\node;C:\Users\lanxe\AppData\Local\GitHubDesktop\bin;C:\Users\lanxe\AppData\Local\Microsoft\WindowsApps;C:\Users\lanxe\lib\go\default\bin;C:\Users\lanxe\dev\go\bin;C:\Users\lanxe\lib\java\default\bin;C:\Users\lanxe\dev\go\bin;;C:\Users\lanxe\lib\gradle\gradle-3.5\bin;C:\Users\lanxe\lib\android\sdk\tools;C:\Users\lanxe\lib\android\sdk\platform-tools;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.161-b12"/>
+    <property name="java.ext.dirs" value="C:\Users\lanxe\lib\java\jdk1.8.0_161-x64\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testConcat" classname="com.utaka.inspire.util.PathTests" time="0"/>
+</testsuite>
