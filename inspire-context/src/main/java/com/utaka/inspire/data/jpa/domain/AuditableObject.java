@@ -39,18 +39,18 @@ public class AuditableObject extends AbstractObject implements StringAuditable {
     private String createdBy;
 
     @CreatedDate
-    @Column(name = "created_date")
+    @Column(name = "created_time")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date createdDate;
+    private Date createdTime;
 
     @LastModifiedBy
     @Column(length = 50, name = "last_modified_by")
     private String lastModifiedBy;
 
     @LastModifiedDate
-    @Column(name = "last_modified_date")
+    @Column(name = "last_modified_time")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date lastModifiedDate;
+    private Date lastModifiedTime;
 
     /**
      * default constructor
@@ -102,19 +102,19 @@ public class AuditableObject extends AbstractObject implements StringAuditable {
 
     /*
      * (non-Javadoc)
-     * @see org.springframework.data.domain.Auditable#getCreatedDate()
+     * @see org.springframework.data.domain.Auditable#getCreatedTime()
      */
-    public Optional<LocalDateTime> getCreatedDate() {
-        return null == createdDate ? Optional.empty()
-                : Optional.of(LocalDateTime.ofInstant(createdDate.toInstant(), ZoneId.systemDefault()));
+    public Optional<LocalDateTime> getCreatedTime() {
+        return null == createdTime ? Optional.empty()
+                : Optional.of(LocalDateTime.ofInstant(createdTime.toInstant(), ZoneId.systemDefault()));
     }
 
     /*
      * (non-Javadoc)
-     * @see org.springframework.data.domain.Auditable#setCreatedDate(java.time.temporal.TemporalAccessor)
+     * @see org.springframework.data.domain.Auditable#setCreatedTime(java.time.temporal.TemporalAccessor)
      */
-    public void setCreatedDate(LocalDateTime createdDate) {
-        this.createdDate = Date.from(createdDate.atZone(ZoneId.systemDefault()).toInstant());
+    public void setCreatedTime(LocalDateTime createdTime) {
+        this.createdTime = Date.from(createdTime.atZone(ZoneId.systemDefault()).toInstant());
     }
 
     /*
@@ -137,19 +137,19 @@ public class AuditableObject extends AbstractObject implements StringAuditable {
 
     /*
      * (non-Javadoc)
-     * @see org.springframework.data.domain.Auditable#getLastModifiedDate()
+     * @see org.springframework.data.domain.Auditable#getLastModifiedTime()
      */
-    public Optional<LocalDateTime> getLastModifiedDate() {
-        return null == lastModifiedDate ? Optional.empty()
-                : Optional.of(LocalDateTime.ofInstant(lastModifiedDate.toInstant(), ZoneId.systemDefault()));
+    public Optional<LocalDateTime> getLastModifiedTime() {
+        return null == lastModifiedTime ? Optional.empty()
+                : Optional.of(LocalDateTime.ofInstant(lastModifiedTime.toInstant(), ZoneId.systemDefault()));
     }
 
     /*
      * (non-Javadoc)
-     * @see org.springframework.data.domain.Auditable#setLastModifiedDate(java.time.temporal.TemporalAccessor)
+     * @see org.springframework.data.domain.Auditable#setLastModifiedTime(java.time.temporal.TemporalAccessor)
      */
-    public void setLastModifiedDate(LocalDateTime lastModifiedDate) {
-        this.lastModifiedDate = Date.from(lastModifiedDate.atZone(ZoneId.systemDefault()).toInstant());
+    public void setLastModifiedTime(LocalDateTime lastModifiedTime) {
+        this.lastModifiedTime = Date.from(lastModifiedTime.atZone(ZoneId.systemDefault()).toInstant());
     }
 
     /**
@@ -163,12 +163,12 @@ public class AuditableObject extends AbstractObject implements StringAuditable {
         LocalDateTime now = LocalDateTime.now();
         if (this.isNew()) {
             this.setCreatedBy(auditor);
-            this.setCreatedDate(now);
+            this.setCreatedTime(now);
             this.setLastModifiedBy(auditor);
-            this.setLastModifiedDate(now);
+            this.setLastModifiedTime(now);
         } else {
             this.setLastModifiedBy(auditor);
-            this.setLastModifiedDate(now);
+            this.setLastModifiedTime(now);
 
         }
     }
@@ -182,9 +182,9 @@ public class AuditableObject extends AbstractObject implements StringAuditable {
         return super.toStringHelper()
                 .add("version", this.version)
                 .add("createdBy", this.createdBy)
-                .add("createdDate", this.createdDate)
+                .add("createdTime", this.createdTime)
                 .add("lastModifiedBy", this.lastModifiedBy)
-                .add("lastModifiedDate", this.lastModifiedDate);
+                .add("lastModifiedTime", this.lastModifiedTime);
 
     }
 
@@ -195,9 +195,9 @@ public class AuditableObject extends AbstractObject implements StringAuditable {
             AuditableObject ae = (AuditableObject) source;
             this.version = ae.version;
             this.createdBy = ae.createdBy;
-            this.createdDate = ae.createdDate;
+            this.createdTime = ae.createdTime;
             this.lastModifiedBy = ae.lastModifiedBy;
-            this.lastModifiedDate = ae.lastModifiedDate;
+            this.lastModifiedTime = ae.lastModifiedTime;
         }
 
     }
@@ -216,13 +216,13 @@ public class AuditableObject extends AbstractObject implements StringAuditable {
         AuditableObject that = (AuditableObject) o;
         return version == that.version &&
                 Objects.equals(createdBy, that.createdBy) &&
-                Objects.equals(createdDate, that.createdDate) &&
+                Objects.equals(createdTime, that.createdTime) &&
                 Objects.equals(lastModifiedBy, that.lastModifiedBy) &&
-                Objects.equals(lastModifiedDate, that.lastModifiedDate);
+                Objects.equals(lastModifiedTime, that.lastModifiedTime);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), version, createdBy, createdDate, lastModifiedBy, lastModifiedDate);
+        return Objects.hash(super.hashCode(), version, createdBy, createdTime, lastModifiedBy, lastModifiedTime);
     }
 }
