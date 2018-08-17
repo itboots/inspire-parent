@@ -51,6 +51,7 @@ class RocketMqConfiguration {
         RocketMqMessageDelegate delegate = new RocketMqMessageDelegate();
         delegate.setConsumer(consumer);
         delegate.setTopic(properties.getRocketmq().getTopic());
+        delegate.setTag(properties.getRocketmq().getTag());
         return delegate;
     }
 
@@ -77,4 +78,5 @@ class RocketMqConfiguration {
         producer.setInstanceName(props.getProducerName());
         return producer;
     }
+
 }

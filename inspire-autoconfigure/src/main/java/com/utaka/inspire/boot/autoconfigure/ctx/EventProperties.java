@@ -91,6 +91,8 @@ class EventProperties {
          */
         private String topic = "*";
 
+        private String tag = "*";
+
         /**
          * 消息名称服务地址.
          */
@@ -130,6 +132,14 @@ class EventProperties {
             this.topic = topic;
         }
 
+        public String getTag() {
+            return tag;
+        }
+
+        public void setTag(String tag) {
+            this.tag = tag;
+        }
+
         public String getNamesrvAddr() {
             return namesrvAddr;
         }
@@ -152,6 +162,45 @@ class EventProperties {
 
         public void setProducerName(String producerName) {
             this.producerName = producerName;
+        }
+    }
+
+
+    private AliyunOns ons = new AliyunOns();
+
+    public AliyunOns getOns() {
+        return ons;
+    }
+
+    public void setOns(AliyunOns ons) {
+        this.ons = ons;
+    }
+
+    public static class AliyunOns extends Rocketmq {
+        /**
+         * 访问密钥
+         */
+        private String accessKey;
+
+        /**
+         * 访问密钥
+         */
+        private String secretKey;
+
+        public String getAccessKey() {
+            return accessKey;
+        }
+
+        public void setAccessKey(String accessKey) {
+            this.accessKey = accessKey;
+        }
+
+        public String getSecretKey() {
+            return secretKey;
+        }
+
+        public void setSecretKey(String secretKey) {
+            this.secretKey = secretKey;
         }
     }
 }

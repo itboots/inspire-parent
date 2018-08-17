@@ -5,44 +5,42 @@
 /**
  *
  */
-package com.utaka.inspire.event.rocketmq;
+package com.utaka.inspire.event.ons;
 
+import com.aliyun.openservices.ons.api.Message;
+import com.aliyun.openservices.ons.api.order.ConsumeOrderContext;
+import com.aliyun.openservices.ons.api.order.MessageOrderListener;
+import com.aliyun.openservices.ons.api.order.OrderAction;
+import com.aliyun.openservices.ons.api.order.OrderConsumer;
 import com.google.common.base.Charsets;
 import com.utaka.inspire.event.EventBusManager;
 import com.utaka.inspire.util.LogManager;
 import com.utaka.inspire.util.Serializing;
 import com.utaka.inspire.util.StringUtils;
-import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
-import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
-import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
-import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
-import org.apache.rocketmq.common.message.MessageExt;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
 
 /**
  * @author LANXE
  */
-public class RocketMqMessageDelegate implements MessageListenerConcurrently, InitializingBean, DisposableBean {
+public class AliyunOnsMessageDelegate implements MessageOrderListener, InitializingBean, DisposableBean {
 
     private static final Logger LOG = LogManager.getCurrentClassLogger();
 
     @Autowired(required = false)
     protected EventBusManager bus;
 
-    private DefaultMQPushConsumer consumer;
+    private OrderConsumer consumer;
 
     private String topic;
 
     private String tag = "*";
 
-    public void setConsumer(DefaultMQPushConsumer consumer) {
+    public void setConsumer(OrderConsumer consumer) {
         this.consumer = consumer;
     }
 
@@ -57,26 +55,23 @@ public class RocketMqMessageDelegate implements MessageListenerConcurrently, Ini
 
     @Override
     @Transactional(rollbackFor = Throwable.class)
-    public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> messages, ConsumeConcurrentlyContext context) {
-        System.out.println(Thread.currentThread().getName() + " Receive New Messages: " + messages.size());
+    public OrderAction consume(Message message, ConsumeOrderContext context) {
         try {
-            for (MessageExt message : messages) {
-                this.handleMessage(message);
-            }
-            return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
+            this.handleMessage(message);
+            return OrderAction.Success;
         } catch (Exception e) {
-            return ConsumeConcurrentlyStatus.RECONSUME_LATER;
+            return OrderAction.Suspend;
         }
 
     }
 
 
-    public void handleMessage(MessageExt message) {
+    public void handleMessage(Message message) {
 
         LOG.info("###receive from queue message ({}) success!", message);
 
         try {
-            String className = message.getTags();
+            String className = message.getTag();
 
             Object event = null;
             if (StringUtils.isNotEmpty(className)) {
@@ -93,7 +88,7 @@ public class RocketMqMessageDelegate implements MessageListenerConcurrently, Ini
     }
 
     @Override
-    public void afterPropertiesSet() throws Exception {
+    public void afterPropertiesSet() {
         if (this.bus == null) {
             this.bus = new EventBusManager();
         }
@@ -103,8 +98,7 @@ public class RocketMqMessageDelegate implements MessageListenerConcurrently, Ini
          * 订阅指定topic下所有消息<br>
          * 注意：一个consumer对象可以订阅多个topic
          */
-        consumer.subscribe(this.topic, this.tag);
-        consumer.registerMessageListener(this);
+        consumer.subscribe(topic, tag, this);
         consumer.start();
 
     }

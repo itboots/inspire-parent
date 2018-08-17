@@ -9,10 +9,10 @@
     <groupId>com.utaka.inspire</groupId>
     <artifactId>inspire-bom</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 
     <properties>
-        <inspire.version>1.0.2</inspire.version>
+        <inspire.version>1.0.3</inspire.version>
     </properties>
 
     <dependencyManagement>

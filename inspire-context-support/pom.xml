@@ -10,7 +10,7 @@
     <parent>
         <groupId>com.utaka.inspire</groupId>
         <artifactId>inspire-parent</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
         <relativePath>..</relativePath>
     </parent>
 
@@ -92,11 +92,20 @@
             <version>1.5.0</version>
         </dependency>
 
+        <!-- rocketmq -->
         <dependency>
             <groupId>org.apache.rocketmq</groupId>
             <artifactId>rocketmq-client</artifactId>
             <version>4.3.0</version>
             <optional>true</optional>
         </dependency>
+
+        <dependency>
+            <groupId>com.aliyun.openservices</groupId>
+            <artifactId>ons-client</artifactId>
+            <version>1.7.8.Final</version>
+            <optional>true</optional>
+        </dependency>
+
     </dependencies>
 </project>
