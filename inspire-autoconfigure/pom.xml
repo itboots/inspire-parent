@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.utaka.inspire</groupId>
         <artifactId>inspire-parent</artifactId>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
         <relativePath>..</relativePath>
     </parent>
     <dependencies>
@@ -30,6 +30,12 @@
             <groupId>${project.parent.groupId}</groupId>
             <version>${project.parent.version}</version>
             <artifactId>inspire-context-support</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>${project.parent.groupId}</groupId>
+            <version>${project.parent.version}</version>
+            <artifactId>inspire-jpa</artifactId>
             <optional>true</optional>
         </dependency>
         <dependency>

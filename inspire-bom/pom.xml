@@ -9,10 +9,10 @@
     <groupId>com.utaka.inspire</groupId>
     <artifactId>inspire-bom</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
 
     <properties>
-        <inspire.version>1.0.3</inspire.version>
+        <inspire.version>1.0.4</inspire.version>
     </properties>
 
     <dependencyManagement>
@@ -26,6 +26,11 @@
             <dependency>
                 <groupId>com.utaka.inspire</groupId>
                 <artifactId>inspire-context-support</artifactId>
+                <version>${inspire.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.utaka.inspire</groupId>
+                <artifactId>inspire-jpa</artifactId>
                 <version>${inspire.version}</version>
             </dependency>
             <dependency>
