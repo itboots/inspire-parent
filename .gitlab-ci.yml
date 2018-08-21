@@ -11,12 +11,15 @@ cache:
 test:
   stage: test
   script:
-    - mvn $MAVEN_CLI_OPTS clean test
+    - mvn $MAVEN_CLI_OPTS test
+  except:
+    - tags
+    - master
 
 deploy:
   stage: deploy
   script:
-    - mvn $MAVEN_CLI_OPTS clean deploy
+    - mvn $MAVEN_CLI_OPTS deploy
   only:
     - tags
     - master
