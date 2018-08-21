@@ -3,4 +3,5 @@ org.springframework.boot.env.PropertySourceLoader=\
   com.utaka.inspire.boot.env.EncodedPropertiesPropertySourceLoader
 # Auto Configure
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.utaka.inspire.boot.autoconfigure.ctx.ContextAutoConfiguration
+  com.utaka.inspire.boot.autoconfigure.ctx.ContextAutoConfiguration,\
+  com.utaka.inspire.boot.autoconfigure.jpa.GenericRepositoriesAutoConfiguration

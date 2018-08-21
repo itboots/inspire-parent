@@ -9,7 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.utaka.inspire</groupId>
     <artifactId>inspire-parent</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -31,6 +31,7 @@
     <modules>
         <module>inspire-context</module>
         <module>inspire-context-support</module>
+        <module>inspire-jpa</module>
         <module>inspire-autoconfigure</module>
         <module>inspire-bom</module>
     </modules>
