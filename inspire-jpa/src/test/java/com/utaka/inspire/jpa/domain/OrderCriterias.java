@@ -15,8 +15,6 @@ import java.util.Set;
 
 public class OrderCriterias extends AbstractCriteria {
 
-    public static final String COUNT_BY_FREE_FILTER = "SELECT COUNT(distinct ord.id) FROM Order ord";
-
     @OrderByPart
     public String orderByCreatedDate = "ord.createdDate";
 

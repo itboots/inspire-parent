@@ -460,7 +460,7 @@ public abstract class JpqlUtils {
             }
         }
 
-        if (ObjectUtils.isNotEmpty(groupBy)) {
+        if (!Iterables.isEmpty(groupBy)) {
             queryBuilder.append(" GROUP BY ");
             queryBuilder.append("(").append(GROUP_BY_JOINER.join(groupBy)).append(") ");
         }
